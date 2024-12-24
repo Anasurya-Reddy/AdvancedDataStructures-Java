@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class SelectionSort {
+class selectionSort {
     void Sort(int arr[]) {
         for (int i = 0; i < arr.length - 1; i++) {
             int m = i;
@@ -27,7 +27,7 @@ class SelectionSort {
     }
 }
 
-public class Ssort {
+public class SelectionSort {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter size of array: ");
@@ -41,8 +41,8 @@ public class Ssort {
 		
 		long startTime = System.nanoTime();
 		s.Sort(a);
-        long endTime = System.nanoTime();
-        long ssorttime = endTime - startTime;
+        	long endTime = System.nanoTime();
+        	long ssorttime = endTime - startTime;
 
 		s.print(a);
 		
