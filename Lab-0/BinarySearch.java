@@ -1,31 +1,29 @@
 import java.util.Scanner;
 
-class binarySearch {
-    void search(int arr[],int key) {
-    	int flag = -1;
-        int low = 0;
-        int high = arr.length;
-        while(low < high) {
-        	int mid = (low+high)/2;
-        	if(arr[mid]==key) {
-        		System.out.println("Your key fuond at index " + mid);
-        		flag = 0;
-        		break;
-        	}
-        	else if(arr[mid] < key) {
-        		low = mid+1;
-        	}
-        	else {
-        		high = mid-1;
-        	}
+class bubbleSort {
+    void Sort(int a[]) {
+        int n = a.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
         }
-        if(flag == -1) {
-        	System.out.println("Your key not found");
+    }
+
+    void print(int a[]) {
+        System.out.println("Sorted array:");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
         }
-	}
+        System.out.println();
+    }
 }
 
-public class BinarySearch {
+public class Bsort {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter size of array: ");
@@ -35,9 +33,16 @@ public class BinarySearch {
 		for(int i=0;i<a.length;i++) {
 			a[i] = sc.nextInt();
 		}
-		System.out.print("Enter key to search : ");
-		int key = sc.nextInt();
-		binarySearch l = new binarySearch();
-		l.search(a,key);
+		bubbleSort b = new bubbleSort();
+		
+		long startTime = System.nanoTime();
+		b.Sort(a);
+        	long endTime = System.nanoTime();
+        	long bsorttime = endTime - startTime;
+
+		b.print(a);
+		
+		System.out.println("Bubble Sort Time : " + bsorttime + " nanoseconds");
+		
 	}
 }
