@@ -23,7 +23,7 @@ class bubbleSort {
     }
 }
 
-public class Bsort {
+public class BubbleSort {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter size of array: ");
@@ -37,8 +37,8 @@ public class Bsort {
 		
 		long startTime = System.nanoTime();
 		b.Sort(a);
-        long endTime = System.nanoTime();
-        long bsorttime = endTime - startTime;
+        	long endTime = System.nanoTime();
+        	long bsorttime = endTime - startTime;
 
 		b.print(a);
 		
