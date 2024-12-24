@@ -38,8 +38,15 @@ public class Ssort {
 			a[i] = sc.nextInt();
 		}
 		SelectionSort s = new SelectionSort();
+		
+		long startTime = System.nanoTime();
 		s.Sort(a);
+        long endTime = System.nanoTime();
+        long ssorttime = endTime - startTime;
+
 		s.print(a);
+		
+		System.out.println("Selection Sort Time : " + ssorttime + " nanoseconds");
 		
 	}
 }
