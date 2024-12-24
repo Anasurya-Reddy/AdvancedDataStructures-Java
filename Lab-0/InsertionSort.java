@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class InsertionSort {
+class insertionSort {
     void Sort(int arr[]) {
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
@@ -24,7 +24,7 @@ class InsertionSort {
     }
 }
 
-public class Isort {
+public class InsertionSort {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter size of array: ");
@@ -34,9 +34,15 @@ public class Isort {
 		for(int i=0;i<a.length;i++) {
 			a[i] = sc.nextInt();
 		}
-		InsertionSort is = new InsertionSort();
+		insertionSort is = new insertionSort();
+		
+		long startTime = System.nanoTime();
 		is.Sort(a);
+        	long endTime = System.nanoTime();
+        	long isorttime = endTime - startTime;
+
 		is.print(a);
 		
+		System.out.println("Insertion Sort Time : " + isorttime + " nanoseconds");
 	}
 }
