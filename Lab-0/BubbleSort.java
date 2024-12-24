@@ -34,8 +34,15 @@ public class Bsort {
 			a[i] = sc.nextInt();
 		}
 		bubbleSort b = new bubbleSort();
+		
+		long startTime = System.nanoTime();
 		b.Sort(a);
+        long endTime = System.nanoTime();
+        long bsorttime = endTime - startTime;
+
 		b.print(a);
+		
+		System.out.println("Bubble Sort Time : " + bsorttime + " nanoseconds");
 		
 	}
 }
