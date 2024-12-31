@@ -37,7 +37,7 @@ public class SelectionSort {
 		for(int i=0;i<a.length;i++) {
 			a[i] = sc.nextInt();
 		}
-		SelectionSort s = new SelectionSort();
+		selectionSort s = new selectionSort();
 		
 		long startTime = System.nanoTime();
 		s.Sort(a);
