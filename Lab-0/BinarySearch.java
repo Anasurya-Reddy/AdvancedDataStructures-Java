@@ -4,11 +4,11 @@ class binarySearch {
     void search(int arr[],int key) {
     	int flag = -1;
         int low = 0;
-        int high = arr.length;
-        while(low < high) {
+        int high = arr.length-1;
+        while(low <= high) {
         	int mid = (low+high)/2;
         	if(arr[mid]==key) {
-        		System.out.println("Your key fuond at index " + mid);
+        		System.out.println("Your key found at index " + mid);
         		flag = 0;
         		break;
         	}
@@ -25,7 +25,7 @@ class binarySearch {
 	}
 }
 
-public class BinarySearch {
+public class lab {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter size of array: ");
