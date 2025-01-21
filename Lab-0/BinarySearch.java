@@ -37,7 +37,7 @@ public class BinarySearch {
 		}
 		System.out.print("Enter key to search : ");
 		int key = sc.nextInt();
-		binarySearch l = new binarySearch();
-		l.search(a,key);
+		binarySearch b = new binarySearch();
+		b.search(a,key);
 	}
 }
